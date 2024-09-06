@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicinal Foods Flip Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 40px;
+            margin: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .card {
+            perspective: 1000px;
+            width: 240px;
+            height: 320px;
+            margin: 20px;
+        }
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-front {
+            background-color: #ffcc00;
+        }
+        .card-back {
+            background-color: #333;
+            transform: rotateY(180deg);
+        }
+        .card-back a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        img {
+            width: 100%;
+            height: 130px;
+            border-radius: 8px;
+        }
+        p {
+            font-size: 1em;
+            padding: 10px;
+            color: #fff;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-top: 5px;
+        }
+        .card-content {
+            padding: 10px;
+        }
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .card-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 480px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Explore the Medicinal Powers of Kitchen Foods</h1>
+
+    <div class="card-container">
+        <!-- Garlic Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/ac70a9d6-1db5-4d20-950f-f9caeaba46bb/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169.png?t=1725638948" alt="Garlic">
+                    <div class="card-content">
+                        <h3>Garlic</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Garlic is a natural antibiotic that strengthens the immune system, helps lower blood pressure, and reduces cholesterol levels. Known for its potent antiviral properties, it can also be used to fight infections. A key ingredient in many home remedies.</p>
+                    <a href="https://www.learningherbs.com/blog/garlic-remedy#gsc.tab=0" target="_blank" rel="noopener noreferrer">Try a Garlic Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ginger Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f5a3e805-f7b6-4ed7-90a5-5ba34b88cae4/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__1_.png?t=1725638949" alt="Ginger">
+                    <div class="card-content">
+                        <h3>Ginger</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Ginger is packed with antioxidants and anti-inflammatory compounds that can soothe digestive issues, ease nausea, and relieve muscle pain. Widely used in natural medicine, ginger is a powerful remedy for colds and improves circulation.</p>
+                    <a href="https://www.swansonvitamins.com/blog/articles/ginger-unique-uses-health-benefits-and-fresh-ginger-recipes.html" target="_blank" rel="noopener noreferrer">Try a Ginger Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Turmeric Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/46500e96-3288-4b10-962f-894427a1ed21/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__2_.png?t=1725638939" alt="Turmeric">
+                    <div class="card-content">
+                        <h3>Turmeric</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Turmeric, rich in curcumin, is known for its ability to reduce inflammation and promote healing. It has been used in Ayurvedic medicine for centuries to improve digestion, support brain health, and even prevent diseases like cancer.</p>
+                    <a href="https://www.humnutrition.com/blog/anti-inflammatory-turmeric-recipes/" target="_blank" rel="noopener noreferrer">Try a Turmeric Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honey Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/1acc0248-f745-48ff-905e-373fa70b4970/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__3_.png?t=1725638901" alt="Honey">
+                    <div class="card-content">
+                        <h3>Honey</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Honey has antibacterial properties that aid in wound healing and skin care. It’s also a powerful immune booster and a natural remedy for coughs and sore throats. It has been used in beauty treatments for centuries.</p>
+                    <a href="https://www.pinterest.com/freshzenfoods/diy-honey-beauty-recipes/" target="_blank" rel="noopener noreferrer">Try a Honey Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cinnamon Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/16d3bd59-e2b8-4919-8ef8-5e57e6a98e38/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__4_.png?t=1725638909" alt="Cinnamon">
+                    <div class="card-content">
+                        <h3>Cinnamon</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Cinnamon is celebrated for its ability to regulate blood sugar levels and boost metabolism. It’s an antioxidant-rich spice used in various remedies to support heart health, circulation, and digestive wellness.</p>
+                    <a href="http://mamarosemary.com/blog/2015/11/14/4-warming-cinnamon-body-care-recipes" target="_blank" rel="noopener noreferrer">Try a Cinnamon Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lemon Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/f7d44f95-47a6-4538-b39a-387c7632a23c/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__5_.png?t=1725638924" alt="Lemon">
+                    <div class="card-content">
+                        <h3>Lemon</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Lemons are packed with Vitamin C, which helps detoxify the body and support the immune system. They are frequently used in natural remedies to improve digestion, enhance skin health, and promote hydration.</p>
+                    <a href="https://www.webmd.com/food-recipes/ss/slideshow-lemons-and-limes" target="_blank" rel="noopener noreferrer">Try a Lemon Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apple Cider Vinegar Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/34dd27b3-aaba-4411-8056-9624a45c241e/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__6_.png?t=1725638901" alt="Apple Cider Vinegar">
+                    <div class="card-content">
+                        <h3>Apple Cider Vinegar</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Apple cider vinegar is believed to aid in digestion, weight loss, and detoxification. Rich in beneficial bacteria and enzymes, it’s also a natural remedy for skin issues and balancing blood sugar levels.</p>
+                    <a href="https://www.gaia.com/article/health-benefits-of-apple-cider?utm_source=Google+Search+Paid&utm_medium=TROAS&utm_campaign=1-9-dynamic-general-english-NA&utm_term=not-applicable&gad_source=1&gclid=Cj0KCQjw0Oq2BhCCARIsAA5hubVmzbhVjfbdcFis1z9mgdw6uFsTfYtMLaqbjNjtyZNYSp9zzrvgF0UaAlB7EALw_wcB" target="_blank" rel="noopener noreferrer">Try an ACV Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spinach Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/37916423-5ceb-47e2-993c-6db684228278/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__7_.png?t=1725638906" alt="Spinach">
+                    <div class="card-content">
+                        <h3>Spinach</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Spinach is a superfood rich in iron, vitamins, and antioxidants. It supports energy production, helps detoxify the body, and is often used to maintain healthy skin, hair, and bones.</p>
+                    <a href="https://cleanplates.com/recipe-roundup/healthy-spinach-recipes/" target="_blank" rel="noopener noreferrer">Try a Spinach Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oats Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/9654ceb8-0c85-4c8e-8f76-ddd96c7b226e/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__8_.png?t=1725638918" alt="Oats">
+                    <div class="card-content">
+                        <h3>Oats</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Oats are known for their ability to lower cholesterol and boost heart health. They’re a great source of soluble fiber and are frequently used to improve digestion and maintain balanced blood sugar levels.</p>
+                    <a href="https://www.pinterest.com/pin/overnight-oats-recipe-for-healthy-skin-beauty-bites--37717715608924926/" target="_blank" rel="noopener noreferrer">Try an Oats Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blueberries Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/3509d9ac-ecd0-402d-a592-deaebc30f871/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__9_.png?t=1725638914" alt="Blueberries">
+                    <div class="card-content">
+                        <h3>Blueberries</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Blueberries are rich in antioxidants that support brain function, improve heart health, and boost the immune system. They have been linked to longevity and improved cognitive performance.</p>
+                    <a href="https://www.sanovadermatology.com/skin-care/antioxidant-advocate-5-ways-to-incorporate-blueberries-into-your-diet/" target="_blank" rel="noopener noreferrer">Try a Blueberry Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salmon Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/b2c930bf-aec5-41aa-992a-0bb315df6602/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__10_.png?t=1725638937" alt="Salmon">
+                    <div class="card-content">
+                        <h3>Salmon</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Salmon is rich in omega-3 fatty acids, which help reduce inflammation, support heart health, and improve brain function. It’s a nutrient-dense food linked to longevity and overall wellness.</p>
+                    <a href="https://www.womenshealthmag.com/food/g60126809/healthy-salmon-recipes/" target="_blank" rel="noopener noreferrer">Try a Salmon Recipe</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eggs Card -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/337d4f72-a33d-421c-bb52-1612ffbca9c3/Pink_Blue_Pastel_Playful_Fashion_Collection_Presentation_169__11_.png?t=1725638910" alt="Eggs">
+                    <div class="card-content">
+                        <h3>Eggs</h3>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Eggs are a complete source of protein, rich in vitamins and minerals that support muscle health, brain function, and energy production. They are a staple in many nutritious diets for overall wellness.</p>
+                    <a href="https://thestripe.com/egg-beauty-benefits/" target="_blank" rel="noopener noreferrer">Try an Eggs Recipe</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
